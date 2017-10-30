@@ -1,0 +1,40 @@
+Problem Statement
+Task:3
+
+Create a file max-temp.txt in local FS.
+Put some 10-15 records of date and temperature example:
+dd-mm-yyyy,temperature
+Example:
+10-01-1990,10
+10-02-1991,20
+Move this file to HDFS at /user/acadgild/hadoop.
+
+Solution:
+
+Task3:Screenshot: Assignment4_Screenshot_Task3
+
+max-temp.txt file is created using command vi max-temp.txt, and as show in screen shot file is available inside /home/cloudera/LocalFS folder.
+using cat-max-temp.txt all the data inside the text file is displayed.
+
+File is moved to HDFS cluster inside folder /user/cloudera/hadoop using the command "hadoop fs -put max-temp.txt /user/cloudera/hadoop" as shown in the screenshot.
+
+max-temp.txt file is avaialble in HDFS cluster as shown in screenshot.
+
+Problem Statement
+Task:4
+
+Change the permission of the file /user/cloudera/hadoop/max-temp.txt, such that
+only the owner and the group members have full control over the file.
+Others do not have any control over it.
+
+Solution:
+
+Task4:Screenshot: Assignment4_Screenshot_Task4
+
+Using the command chown changed the owner name to "keshav":
+hdfs dfs -chown keshav /user/cloudera/hadoop/max-temp.txt
+
+Using the command chgrp changed the group of ame to "group1":
+hdfs dfs -chgrp group1 /user/cloudera/hadoop/max-temp.txt
+
+BUT as i am using cloudera distribution, it is not allowing me to change the name of the group and owner.
