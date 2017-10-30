@@ -1,6 +1,6 @@
 # Hadoop_Session1_Assignment4
 
-In this assignment, you need to perform the given tasks.
+In this assignment, I need to perform the given tasks.
 
 Task:3
 Create a file max-temp.txt in local FS.
